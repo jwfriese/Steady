@@ -6,5 +6,5 @@ before_install:
 - export PATH=$PATH:$XCODEBUILD_PATH
 
 script:
-- xcodebuild -list
+- xcodebuild -workspace FleetUI.xcworkspace -list
 - go run script/tests.go
