@@ -1,5 +1,9 @@
 import Foundation
 
+func wait(timeout: Double) {
+    Wait(withPredicate: { return true == false }).timeout(timeout).wait()
+}
+
 func wait(timeout: Double, forCondition condition: () -> Bool) -> Bool {
     let wait = Wait(withPredicate: condition).timeout(timeout).wait()
     return wait
