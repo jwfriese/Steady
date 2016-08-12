@@ -9,11 +9,9 @@ class UserWaitTests: XCTestCase {
         super.setUp()
 
         continueAfterFailure = false
-        let app = XCUIApplication()
         UIView.setAnimationsEnabled(false)
-        user = FleetUI.createUser(app, testCase: self)
-        app.launch()
-        sleep(1)
+        user = FleetUI.createUser(testCase: self)
+        user.startTesting()
     }
 
     func testActionsWillWaitBeforeGivingUpAndFailing() {

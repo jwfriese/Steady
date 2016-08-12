@@ -11,6 +11,15 @@ public class User {
         reporter = aReporter
     }
 
+    public func startTesting() {
+        app.launch()
+
+        // As a workaround to the radar found here: http://openradar.appspot.com/26320475
+        // Hopefully, this can go away one day. Once it does, Fleet users won't have to do anything
+        // in their tests. We'll just take this out.
+        sleep(1)
+    }
+
     public func tapButtonWithText(text: String) {
         doAction(TapButtonAction(text: text))
     }

@@ -9,9 +9,8 @@ class BoxTurtlePageTests: XCTestCase {
         super.setUp()
 
         continueAfterFailure = false
-        let app = XCUIApplication()
-        user = FleetUI.createUser(app, testCase: self)
-        app.launch()
+        user = FleetUI.createUser(testCase: self)
+        user.startTesting()
     }
 
     func testMakeThatTurtleDance() {
