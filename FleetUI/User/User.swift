@@ -17,7 +17,7 @@ public class User {
         // As a workaround to the radar found here: http://openradar.appspot.com/26320475
         // Hopefully, this can go away one day. Once it does, Fleet users won't have to do anything
         // in their tests. We'll just take this out.
-        sleep(1)
+        wait(0.5) { return true == false }
     }
 
     public func tapButtonWithText(text: String) {
