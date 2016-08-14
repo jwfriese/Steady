@@ -5,6 +5,6 @@
       location = "group:Externals/Nimble/Nimble.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jwfriese/workspace/FleetUI/FleetUI.xcodeproj">
+      location = "group:FleetUI.xcodeproj">
    </FileRef>
 </Workspace>
