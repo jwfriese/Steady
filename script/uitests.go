@@ -14,7 +14,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	uiTestCommand := exec.Command("xcodebuild", "test", "-workspace", "FleetUI.xcworkspace", "-scheme", "FleetUI", "-destination", "platform=iOS Simulator,OS=9.3,name=iPhone 6")
+	uiTestCommand := exec.Command("xcodebuild", "-verbose", "test", "-workspace", "FleetUI.xcworkspace", "-scheme", "FleetUI", "-destination", "platform=iOS Simulator,OS=9.3,name=iPhone 6")
 	uiTestCommand.Stdout = stdOut
 	uiTestCommand.Stderr = stdErr
 	uiTestErr := uiTestCommand.Run()
