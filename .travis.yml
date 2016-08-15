@@ -7,4 +7,4 @@ before_install:
 
 script:
 - xcodebuild -workspace FleetUI.xcworkspace -list
-- go run script/tests.go
+- go run Testing/tests.go
