@@ -46,6 +46,8 @@
 		7BAC78EE1D4CEE40000F86E4 /* FleetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78ED1D4CEE40000F86E4 /* FleetUI.swift */; };
 		7BAC78F41D4CF097000F86E4 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78F31D4CF097000F86E4 /* Reporter.swift */; };
 		7BAC78F71D4CF129000F86E4 /* FakeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78F61D4CF129000F86E4 /* FakeReporter.swift */; };
+		7BB14A271D634399002ABE82 /* NotSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A261D634399002ABE82 /* NotSpec.swift */; };
+		7BB14A291D63446C002ABE82 /* Not.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A281D63446C002ABE82 /* Not.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +76,6 @@
 		7B3AD2121D5CBBA700CA2897 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD2131D5CBBA700CA2897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B3AD2151D5CBBA700CA2897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7B3AD2171D5CBBA700CA2897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B3AD2181D5CBBA700CA2897 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3AD21A1D5CBBA700CA2897 /* AnimalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListViewController.swift; sourceTree = "<group>"; };
 		7B3AD21B1D5CBBA700CA2897 /* BoxTurtleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxTurtleViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +113,8 @@
 		7BAC78ED1D4CEE40000F86E4 /* FleetUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleetUI.swift; sourceTree = "<group>"; };
 		7BAC78F31D4CF097000F86E4 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 		7BAC78F61D4CF129000F86E4 /* FakeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeReporter.swift; sourceTree = "<group>"; };
+		7BB14A261D634399002ABE82 /* NotSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotSpec.swift; sourceTree = "<group>"; };
+		7BB14A281D63446C002ABE82 /* Not.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Not.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +160,6 @@
 				7B3AD2121D5CBBA700CA2897 /* AppDelegate.swift */,
 				7B3AD2131D5CBBA700CA2897 /* Assets.xcassets */,
 				7B3AD2141D5CBBA700CA2897 /* LaunchScreen.storyboard */,
-				7B3AD2161D5CBBA700CA2897 /* Main.storyboard */,
 				7B3AD2181D5CBBA700CA2897 /* Info.plist */,
 				7B3AD2191D5CBBA700CA2897 /* Storyboards */,
 			);
@@ -216,6 +218,7 @@
 				7B43F3B91D563588000B1A30 /* Expectation.swift */,
 				7B43F3BB1D563650000B1A30 /* ExpectationResult.swift */,
 				7B43F3BE1D56393B000B1A30 /* ExpectationCreators.swift */,
+				7BB14A281D63446C002ABE82 /* Not.swift */,
 			);
 			path = Expectations;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				7B43F3C21D563A61000B1A30 /* CanSeeTextExpectationSpec.swift */,
+				7BB14A261D634399002ABE82 /* NotSpec.swift */,
 			);
 			path = Expectations;
 			sourceTree = "<group>";
@@ -496,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B43F3AC1D5623BD000B1A30 /* SuccessSpec.swift in Sources */,
+				7BB14A271D634399002ABE82 /* NotSpec.swift in Sources */,
 				7B43F3B01D56245A000B1A30 /* ErrorSpec.swift in Sources */,
 				7BAC78AF1D4A438E000F86E4 /* BoxTurtlePageTests.swift in Sources */,
 				7B43F3AE1D56240D000B1A30 /* FailureSpec.swift in Sources */,
@@ -525,6 +530,7 @@
 				7BAC78F41D4CF097000F86E4 /* Reporter.swift in Sources */,
 				7B43F3AA1D56231E000B1A30 /* Error.swift in Sources */,
 				7BAC78D81D4B00FB000F86E4 /* User.swift in Sources */,
+				7BB14A291D63446C002ABE82 /* Not.swift in Sources */,
 				7B43F3C71D563DA0000B1A30 /* ActionResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,14 +557,6 @@
 				7B3AD2151D5CBBA700CA2897 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		7B3AD2161D5CBBA700CA2897 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B3AD2171D5CBBA700CA2897 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

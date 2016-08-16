@@ -18,5 +18,6 @@ class UserWaitTests: XCTestCase {
         user.tapButtonWithText("Show Puppies")
         user.tapButtonWithText("Corgi") // This is expected to appear after a period of time
         user.expectsTo(findText("It's a Corgi!"))
+        user.expectsTo(not(findText("I don't see what's so great about puppies")))
     }
 }
