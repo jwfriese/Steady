@@ -16,10 +16,10 @@ class NotSpec: XCTestCase {
     }
 
     func test_not_logicallyFlipsExpectation() {
-        user.expectsTo(not(findText("KITTENS THO")))
+        user.expectsTo(not(seeText("KITTENS THO")))
         expect(self.reporter.lastReportedMessage).to(beNil())
 
-        user.expectsTo(not(findText("Animals")))
+        user.expectsTo(not(seeText("Animals")))
         expect(self.reporter.lastReportedMessage).to(equal("User expected to not find text \"Animals\", but did"))
     }
 }

@@ -15,8 +15,8 @@ class CanSeeTextExpectationSpec: XCTestCase {
         app.launch()
     }
 
-    func test_findText_whenNoTextExists_reportsError() {
-        user.expectsTo(findText("KITTENS THO"))
+    func test_seeText_whenNoTextExists_reportsError() {
+        user.expectsTo(seeText("KITTENS THO"))
         expect(self.reporter.lastReportedMessage).to(equal("User expected to find text \"KITTENS THO\", but it does not seem to exist"))
     }
 }
