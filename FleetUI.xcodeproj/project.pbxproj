@@ -48,6 +48,7 @@
 		7BAC78F71D4CF129000F86E4 /* FakeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78F61D4CF129000F86E4 /* FakeReporter.swift */; };
 		7BB14A271D634399002ABE82 /* NotSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A261D634399002ABE82 /* NotSpec.swift */; };
 		7BB14A291D63446C002ABE82 /* Not.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A281D63446C002ABE82 /* Not.swift */; };
+		7BB14A2B1D634E21002ABE82 /* FrenchBulldogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A2A1D634E21002ABE82 /* FrenchBulldogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		7BAC78F61D4CF129000F86E4 /* FakeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeReporter.swift; sourceTree = "<group>"; };
 		7BB14A261D634399002ABE82 /* NotSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotSpec.swift; sourceTree = "<group>"; };
 		7BB14A281D63446C002ABE82 /* Not.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Not.swift; sourceTree = "<group>"; };
+		7BB14A2A1D634E21002ABE82 /* FrenchBulldogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchBulldogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				7B3AD21F1D5CBBA700CA2897 /* CorgiViewController.swift */,
 				7B3AD2201D5CBBA700CA2897 /* PuppyListViewController.swift */,
 				7B3AD2211D5CBBA700CA2897 /* PuppyStoryboard.storyboard */,
+				7BB14A2A1D634E21002ABE82 /* FrenchBulldogViewController.swift */,
 			);
 			path = Puppies;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				7BA248A31D5CBE8D00CC750B /* CrabViewController.swift in Sources */,
 				7BA248A41D5CBE8D00CC750B /* CorgiViewController.swift in Sources */,
 				7BA248A51D5CBE8D00CC750B /* PuppyListViewController.swift in Sources */,
+				7BB14A2B1D634E21002ABE82 /* FrenchBulldogViewController.swift in Sources */,
 				7BA248A61D5CBE8D00CC750B /* SpottedTurtleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

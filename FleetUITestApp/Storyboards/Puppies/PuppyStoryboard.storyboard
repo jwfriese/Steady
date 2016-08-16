@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aXc-py-Bt8">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
@@ -24,7 +23,7 @@
         <!--Puppy List View Controller-->
         <scene sceneID="Flu-h1-D67">
             <objects>
-                <viewController storyboardIdentifier="PuppyListViewController" id="LlJ-1j-x7M" customClass="PuppyListViewController" customModule="FleetTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PuppyListViewController" id="LlJ-1j-x7M" customClass="PuppyListViewController" customModule="FleetUITestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oIV-CY-CBg"/>
                         <viewControllerLayoutGuide type="bottom" id="Zfg-rQ-DUu"/>
@@ -54,6 +53,9 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWM-LO-3j2">
                                 <rect key="frame" x="248" y="394" width="104" height="30"/>
                                 <state key="normal" title="French Bulldog"/>
+                                <connections>
+                                    <segue destination="uob-8W-SG6" kind="show" id="oyX-Iq-cVx"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXf-xK-g5x">
                                 <rect key="frame" x="275" y="472" width="50" height="30"/>
@@ -90,7 +92,7 @@
         <!--Corgi View Controller-->
         <scene sceneID="Rcx-0U-2LG">
             <objects>
-                <viewController storyboardIdentifier="CorgiViewController" id="aVp-Cv-lci" customClass="CorgiViewController" customModule="FleetTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CorgiViewController" id="aVp-Cv-lci" customClass="CorgiViewController" customModule="FleetUITestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lRA-7M-9vG"/>
                         <viewControllerLayoutGuide type="bottom" id="jGp-ha-iMm"/>
@@ -99,8 +101,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It's a Corgi!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSI-vO-ibA">
-                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a Corgi!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSI-vO-ibA">
+                                <rect key="frame" x="257" y="290" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -115,6 +117,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osR-BD-Q1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="383" y="985"/>
+        </scene>
+        <!--French Bulldog View Controller-->
+        <scene sceneID="q1u-Pa-xVt">
+            <objects>
+                <viewController id="uob-8W-SG6" customClass="FrenchBulldogViewController" customModule="FleetUITestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PB8-cn-UMS"/>
+                        <viewControllerLayoutGuide type="bottom" id="RvQ-bE-Q9j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xLN-Ru-vUa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10c-6z-IoZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's, like, a million bulldogs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqY-Pi-qiL" userLabel="Title Label">
+                                        <rect key="frame" x="0.0" y="24" width="600" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulldog one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ub-Ns-xCt" userLabel="One">
+                                        <rect key="frame" x="254" y="93" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="french_bulldog" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-1V-PNg" userLabel="french_bulldog image 1">
+                                        <rect key="frame" x="200" y="162" width="200" height="200"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulldog two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HR-NS-aiB" userLabel="Two">
+                                        <rect key="frame" x="254" y="410" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="french_bulldog" translatesAutoresizingMaskIntoConstraints="NO" id="QCJ-aE-UKT" userLabel="french_bulldog image 2">
+                                        <rect key="frame" x="200" y="455" width="200" height="200"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulldog three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKi-7d-hLz" userLabel="Three">
+                                        <rect key="frame" x="249" y="703" width="103" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="french_bulldog" translatesAutoresizingMaskIntoConstraints="NO" id="epp-ch-LPO" userLabel="french_bulldog image 3">
+                                        <rect key="frame" x="200" y="772" width="200" height="200"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QqY-Pi-qiL" firstAttribute="width" secondItem="10c-6z-IoZ" secondAttribute="width" id="1hF-j6-7yK"/>
+                                    <constraint firstItem="epp-ch-LPO" firstAttribute="top" secondItem="gKi-7d-hLz" secondAttribute="bottom" constant="48" id="444-6b-OsT"/>
+                                    <constraint firstItem="QqY-Pi-qiL" firstAttribute="top" secondItem="10c-6z-IoZ" secondAttribute="top" constant="24" id="Anv-73-lh1"/>
+                                    <constraint firstItem="gKi-7d-hLz" firstAttribute="top" secondItem="QCJ-aE-UKT" secondAttribute="bottom" constant="48" id="Fys-7e-cjS"/>
+                                    <constraint firstAttribute="bottom" secondItem="epp-ch-LPO" secondAttribute="bottom" constant="24" id="Hgd-xY-FzX"/>
+                                    <constraint firstItem="QCJ-aE-UKT" firstAttribute="centerX" secondItem="2HR-NS-aiB" secondAttribute="centerX" id="IJ6-mw-GWQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="QqY-Pi-qiL" secondAttribute="trailing" id="IxX-iO-M1y"/>
+                                    <constraint firstItem="QqY-Pi-qiL" firstAttribute="leading" secondItem="10c-6z-IoZ" secondAttribute="leading" id="LDo-tG-FdT"/>
+                                    <constraint firstItem="2HR-NS-aiB" firstAttribute="centerX" secondItem="EvQ-1V-PNg" secondAttribute="centerX" id="QYq-Yd-dJj"/>
+                                    <constraint firstItem="QqY-Pi-qiL" firstAttribute="centerX" secondItem="2HR-NS-aiB" secondAttribute="centerX" id="SsJ-my-lwo"/>
+                                    <constraint firstItem="QqY-Pi-qiL" firstAttribute="centerX" secondItem="10c-6z-IoZ" secondAttribute="centerX" id="aAG-8w-YNv"/>
+                                    <constraint firstItem="epp-ch-LPO" firstAttribute="centerX" secondItem="gKi-7d-hLz" secondAttribute="centerX" id="aAd-pQ-I0c"/>
+                                    <constraint firstItem="EvQ-1V-PNg" firstAttribute="top" secondItem="6ub-Ns-xCt" secondAttribute="bottom" constant="48" id="b3u-ga-oHO"/>
+                                    <constraint firstItem="gKi-7d-hLz" firstAttribute="centerX" secondItem="QCJ-aE-UKT" secondAttribute="centerX" id="dBl-bD-1kL"/>
+                                    <constraint firstItem="EvQ-1V-PNg" firstAttribute="centerX" secondItem="6ub-Ns-xCt" secondAttribute="centerX" id="ktB-EC-7oe"/>
+                                    <constraint firstItem="QCJ-aE-UKT" firstAttribute="top" secondItem="2HR-NS-aiB" secondAttribute="bottom" constant="24" id="lwp-R5-bOB"/>
+                                    <constraint firstItem="2HR-NS-aiB" firstAttribute="top" secondItem="EvQ-1V-PNg" secondAttribute="bottom" constant="48" id="rsR-WD-Jpi"/>
+                                    <constraint firstItem="6ub-Ns-xCt" firstAttribute="top" secondItem="QqY-Pi-qiL" secondAttribute="bottom" constant="48" id="yt8-pl-fKx"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="10c-6z-IoZ" firstAttribute="centerY" secondItem="xLN-Ru-vUa" secondAttribute="centerY" id="8fF-s8-XZ5"/>
+                            <constraint firstItem="10c-6z-IoZ" firstAttribute="height" secondItem="xLN-Ru-vUa" secondAttribute="height" id="SG1-xu-6fT"/>
+                            <constraint firstItem="10c-6z-IoZ" firstAttribute="width" secondItem="xLN-Ru-vUa" secondAttribute="width" id="kRn-VI-VX8"/>
+                            <constraint firstItem="10c-6z-IoZ" firstAttribute="centerX" secondItem="xLN-Ru-vUa" secondAttribute="centerX" id="yri-IH-pTd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKc-MC-wXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085" y="181"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="french_bulldog" width="200" height="200"/>
+    </resources>
 </document>
