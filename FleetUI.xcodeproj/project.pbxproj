@@ -49,6 +49,9 @@
 		7BB14A271D634399002ABE82 /* NotSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A261D634399002ABE82 /* NotSpec.swift */; };
 		7BB14A291D63446C002ABE82 /* Not.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A281D63446C002ABE82 /* Not.swift */; };
 		7BB14A2B1D634E21002ABE82 /* FrenchBulldogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A2A1D634E21002ABE82 /* FrenchBulldogViewController.swift */; };
+		7BB14A2E1D635499002ABE82 /* XCUIElement+Fleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A2D1D635499002ABE82 /* XCUIElement+Fleet.swift */; };
+		7BB14A301D6354F4002ABE82 /* ElementVisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A2F1D6354F4002ABE82 /* ElementVisibilityTests.swift */; };
+		7BB14A321D6358C7002ABE82 /* XCUIApplication+Fleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A311D6358C7002ABE82 /* XCUIApplication+Fleet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,9 @@
 		7BB14A261D634399002ABE82 /* NotSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotSpec.swift; sourceTree = "<group>"; };
 		7BB14A281D63446C002ABE82 /* Not.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Not.swift; sourceTree = "<group>"; };
 		7BB14A2A1D634E21002ABE82 /* FrenchBulldogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchBulldogViewController.swift; sourceTree = "<group>"; };
+		7BB14A2D1D635499002ABE82 /* XCUIElement+Fleet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Fleet.swift"; sourceTree = "<group>"; };
+		7BB14A2F1D6354F4002ABE82 /* ElementVisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementVisibilityTests.swift; sourceTree = "<group>"; };
+		7BB14A311D6358C7002ABE82 /* XCUIApplication+Fleet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Fleet.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +279,7 @@
 				7BAC78A81D4A432A000F86E4 /* Info.plist */,
 				7BAC78AE1D4A438E000F86E4 /* BoxTurtlePageTests.swift */,
 				7B3AD2081D5BC12B00CA2897 /* UserWaitTests.swift */,
+				7BB14A2F1D6354F4002ABE82 /* ElementVisibilityTests.swift */,
 			);
 			path = FleetUITests;
 			sourceTree = "<group>";
@@ -281,9 +288,10 @@
 			isa = PBXGroup;
 			children = (
 				7BAC78ED1D4CEE40000F86E4 /* FleetUI.swift */,
+				7BAC78D01D4B00B6000F86E4 /* FleetUI.h */,
+				7BB14A2C1D63546A002ABE82 /* CoreExtension */,
 				7BAC78F21D4CF097000F86E4 /* Reporting */,
 				7BAC78D61D4B00FB000F86E4 /* User */,
-				7BAC78D01D4B00B6000F86E4 /* FleetUI.h */,
 				7BAC78D21D4B00B6000F86E4 /* Info.plist */,
 			);
 			path = FleetUI;
@@ -342,6 +350,15 @@
 				7BAC78F61D4CF129000F86E4 /* FakeReporter.swift */,
 			);
 			path = Fakes;
+			sourceTree = "<group>";
+		};
+		7BB14A2C1D63546A002ABE82 /* CoreExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7BB14A311D6358C7002ABE82 /* XCUIApplication+Fleet.swift */,
+				7BB14A2D1D635499002ABE82 /* XCUIElement+Fleet.swift */,
+			);
+			path = CoreExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +526,7 @@
 				7BAC78AF1D4A438E000F86E4 /* BoxTurtlePageTests.swift in Sources */,
 				7B43F3AE1D56240D000B1A30 /* FailureSpec.swift in Sources */,
 				7BAC78EC1D4CECAB000F86E4 /* TapButtonActionSpec.swift in Sources */,
+				7BB14A301D6354F4002ABE82 /* ElementVisibilityTests.swift in Sources */,
 				7B3AD2091D5BC12B00CA2897 /* UserWaitTests.swift in Sources */,
 				7B43F3C31D563A61000B1A30 /* CanSeeTextExpectationSpec.swift in Sources */,
 				7BAC78F71D4CF129000F86E4 /* FakeReporter.swift in Sources */,
@@ -529,6 +547,7 @@
 				7B43F3BC1D563650000B1A30 /* ExpectationResult.swift in Sources */,
 				7B43F3A61D562302000B1A30 /* Success.swift in Sources */,
 				7B43F3C11D563A02000B1A30 /* CanSeeTextExpectation.swift in Sources */,
+				7BB14A2E1D635499002ABE82 /* XCUIElement+Fleet.swift in Sources */,
 				7B3AD2051D5A1C8A00CA2897 /* WaitResult.swift in Sources */,
 				7B43F3BF1D56393B000B1A30 /* ExpectationCreators.swift in Sources */,
 				7BAC78F41D4CF097000F86E4 /* Reporter.swift in Sources */,
@@ -536,6 +555,7 @@
 				7BAC78D81D4B00FB000F86E4 /* User.swift in Sources */,
 				7BB14A291D63446C002ABE82 /* Not.swift in Sources */,
 				7B43F3C71D563DA0000B1A30 /* ActionResult.swift in Sources */,
+				7BB14A321D6358C7002ABE82 /* XCUIApplication+Fleet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

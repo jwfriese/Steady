@@ -15,10 +15,15 @@ class CanSeeTextExpectation: Expectation {
 
     func validate(app: XCUIApplication) -> ExpectationResult {
         let textExists = app.staticTexts[text].exists
-        if textExists {
-            return .Satisfied
-        } else {
+        guard textExists else {
             return .Rejected("it does not seem to exist")
         }
+
+        let textVisible = app.staticTexts[text].visible
+        guard textVisible else {
+            return .Rejected("it appears to be offscreen")
+        }
+
+        return .Satisfied
     }
 }
