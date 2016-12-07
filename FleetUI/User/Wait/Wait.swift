@@ -1,10 +1,10 @@
 import Foundation
 
-func wait(timeout: Double) {
-    Wait(withPredicate: { return true == false }).timeout(timeout).wait()
+func wait(_ timeout: Double) {
+    let _ = Wait(withPredicate: { return true == false }).timeout(timeout).wait()
 }
 
-func wait(timeout: Double, forCondition condition: () -> Bool) -> Bool {
+func wait(_ timeout: Double, forCondition condition: @escaping () -> Bool) -> Bool {
     let wait = Wait(withPredicate: condition).timeout(timeout).wait()
     return wait
 }
@@ -27,15 +27,15 @@ private class Wait {
     var predicate: () -> Bool
     var timeout: Double = WaitDefaults.timeout
     var promise: WaitPromise
-    var predicateSource: dispatch_source_t?
-    var timeoutSource: dispatch_source_t?
+    var predicateSource: DispatchSource?
+    var timeoutSource: DispatchSource?
 
-    init(withPredicate predicate: () -> Bool) {
+    init(withPredicate predicate: @escaping () -> Bool) {
         self.predicate = predicate
         self.promise = WaitPromise()
     }
 
-    func timeout(timeout: Double) -> Wait {
+    func timeout(_ timeout: Double) -> Wait {
         self.timeout = timeout
         return self
     }
@@ -47,26 +47,26 @@ private class Wait {
         self.predicateSource = predicateSource
         self.timeoutSource = timeoutSource
 
-        dispatch_resume(predicateSource)
-        dispatch_resume(timeoutSource)
+        predicateSource.resume()
+        timeoutSource.resume()
 
         while promise.isIncomplete() {
             // This "advances" the run loop, blocking on processing of other sources on this run
             // loop (including our timeout and predicate sources above). If this were not here,
             // the loop would spin countless times in this loop before giving up control.
-            NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate.distantFuture())
+            RunLoop.current.run(mode: RunLoopMode.defaultRunLoopMode, before: Date.distantFuture)
         }
 
-        dispatch_suspend(timeoutSource)
-        dispatch_suspend(predicateSource)
+        timeoutSource.suspend()
+        predicateSource.suspend()
 
-        dispatch_source_cancel(timeoutSource)
-        dispatch_source_cancel(predicateSource)
+        timeoutSource.cancel()
+        predicateSource.cancel()
 
         switch promise.result {
-        case .Fulfilled(let value):
+        case .fulfilled(let value):
             return value
-        case .StalledMainRunLoop:
+        case .stalledMainRunLoop:
             print("Fleet: Timeout occurred on user action and run loop stalled")
             return false
         default:
@@ -74,29 +74,22 @@ private class Wait {
         }
     }
 
-    func constructTimeoutSource(timeout: Double) -> dispatch_source_t {
-        let timeoutSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER,
-                                                   0,
-                                                   DISPATCH_TIMER_STRICT,
-                                                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
-        )
+    func constructTimeoutSource(_ timeout: Double) -> DispatchSource {
+        let timeoutSource = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags.strict, queue: DispatchQueue.global(qos: .userInitiated))
 
-        dispatch_source_set_timer(timeoutSource,
-                                  dispatch_time(DISPATCH_TIME_NOW, Int64(timeout * Double(NSEC_PER_SEC))),
-                                  DISPATCH_TIME_FOREVER,
-                                  NSEC_PER_SEC / 4
-        )
+        let timeoutValue = Double(Int64(timeout * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        timeoutSource.scheduleOneshot(deadline: DispatchTime.now() + timeoutValue, leeway: DispatchTimeInterval.milliseconds(2))
 
-        dispatch_source_set_event_handler(timeoutSource) {
+        timeoutSource.setEventHandler {
             guard self.promise.isIncomplete() else { return }
 
-            let timeoutSemaphore = dispatch_semaphore_create(1)
+            let timeoutSemaphore = DispatchSemaphore(value: 1)
 
             let mainRunLoop = CFRunLoopGetMain()
-            CFRunLoopPerformBlock(mainRunLoop, kCFRunLoopDefaultMode) {
-                dispatch_semaphore_signal(timeoutSemaphore)
+            CFRunLoopPerformBlock(mainRunLoop, CFRunLoopMode.defaultMode.rawValue) {
+                timeoutSemaphore.signal()
 
-                if self.promise.set(.Timeout) {
+                if self.promise.set(.timeout) {
                     CFRunLoopStop(mainRunLoop)
                 }
             }
@@ -108,46 +101,42 @@ private class Wait {
             // It's possible that the stopped run loop could stall and never run the timeout
             // code. The following semaphores, which wait on the timeout code to run, are set
             // up to timeout themselves in case that happens.
-            let stallTimeout = dispatch_time(DISPATCH_TIME_NOW,
-                                             Int64(WaitDefaults.mainLoopStallTimeout * NSEC_PER_SEC)
-            )
+            let stallTimeout = DispatchTime.now() + Double(Int64(WaitDefaults.mainLoopStallTimeout * NSEC_PER_SEC)) / Double(NSEC_PER_SEC)
 
-            let timeoutProcessed = dispatch_semaphore_wait(timeoutSemaphore, stallTimeout) != 0
-            if !timeoutProcessed {
-                if self.promise.set(.StalledMainRunLoop) {
+            let didTimeOut = (timeoutSemaphore.wait(timeout: stallTimeout) == .timedOut)
+            if didTimeOut {
+                if self.promise.set(.stalledMainRunLoop) {
                     CFRunLoopStop(mainRunLoop)
                 }
             }
-
         }
 
-        return timeoutSource
+        return timeoutSource as! DispatchSource
     }
 
-    func constructPredicateSource(predicate: () -> Bool) -> dispatch_source_t {
-        let predicateSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER,
-                                                 0,
-                                                 DISPATCH_TIMER_STRICT,
-                                                 dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
+    func constructPredicateSource(_ predicate: @escaping () -> Bool) -> DispatchSource {
+        let predicateSource = DispatchSource.makeTimerSource(
+            flags: DispatchSource.TimerFlags.strict,
+            queue: DispatchQueue.global(qos: .userInitiated)
         )
 
-        dispatch_source_set_timer(predicateSource,
-                                  DISPATCH_TIME_NOW,
-                                  NSEC_PER_SEC,
-                                  NSEC_PER_SEC / 4
+        predicateSource.scheduleRepeating(
+            deadline: DispatchTime.now(),
+            interval: DispatchTimeInterval.nanoseconds(Int(TimeInterval(NSEC_PER_SEC))),
+            leeway: DispatchTimeInterval.milliseconds(1)
         )
 
-        dispatch_source_set_event_handler(predicateSource) {
-            dispatch_async(dispatch_get_main_queue()) {
+        predicateSource.setEventHandler {
+            DispatchQueue.main.async {
                 print("Running predicate evaluation")
                 if predicate() {
-                    if self.promise.set(.Fulfilled(true)) {
+                    if self.promise.set(.fulfilled(true)) {
                         CFRunLoopStop(CFRunLoopGetCurrent())
                     }
                 }
             }
         }
 
-        return predicateSource
+        return predicateSource as! DispatchSource
     }
 }

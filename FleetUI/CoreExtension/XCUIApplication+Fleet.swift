@@ -2,6 +2,6 @@ import XCTest
 
 extension XCUIApplication {
     class func mainWindow() -> XCUIElement {
-        return XCUIApplication().windows.elementBoundByIndex(0)
+        return XCUIApplication().windows.element(boundBy: 0)
     }
 }

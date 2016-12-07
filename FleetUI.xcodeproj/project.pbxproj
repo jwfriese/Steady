@@ -14,10 +14,10 @@
 		7B43F3A01D50CDCE000B1A30 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B43F39D1D50CAFA000B1A30 /* Nimble.framework */; };
 		7B43F3A61D562302000B1A30 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3A51D562302000B1A30 /* Success.swift */; };
 		7B43F3A81D562318000B1A30 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3A71D562318000B1A30 /* Failure.swift */; };
-		7B43F3AA1D56231E000B1A30 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3A91D56231E000B1A30 /* Error.swift */; };
+		7B43F3AA1D56231E000B1A30 /* UIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3A91D56231E000B1A30 /* UIError.swift */; };
 		7B43F3AC1D5623BD000B1A30 /* SuccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3AB1D5623BD000B1A30 /* SuccessSpec.swift */; };
 		7B43F3AE1D56240D000B1A30 /* FailureSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3AD1D56240D000B1A30 /* FailureSpec.swift */; };
-		7B43F3B01D56245A000B1A30 /* ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3AF1D56245A000B1A30 /* ErrorSpec.swift */; };
+		7B43F3B01D56245A000B1A30 /* UIErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3AF1D56245A000B1A30 /* UIErrorSpec.swift */; };
 		7B43F3BA1D563588000B1A30 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3B91D563588000B1A30 /* Expectation.swift */; };
 		7B43F3BC1D563650000B1A30 /* ExpectationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3BB1D563650000B1A30 /* ExpectationResult.swift */; };
 		7B43F3BF1D56393B000B1A30 /* ExpectationCreators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43F3BE1D56393B000B1A30 /* ExpectationCreators.swift */; };
@@ -93,10 +93,10 @@
 		7B43F39D1D50CAFA000B1A30 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		7B43F3A51D562302000B1A30 /* Success.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
 		7B43F3A71D562318000B1A30 /* Failure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
-		7B43F3A91D56231E000B1A30 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		7B43F3A91D56231E000B1A30 /* UIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIError.swift; sourceTree = "<group>"; };
 		7B43F3AB1D5623BD000B1A30 /* SuccessSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessSpec.swift; sourceTree = "<group>"; };
 		7B43F3AD1D56240D000B1A30 /* FailureSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureSpec.swift; sourceTree = "<group>"; };
-		7B43F3AF1D56245A000B1A30 /* ErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSpec.swift; sourceTree = "<group>"; };
+		7B43F3AF1D56245A000B1A30 /* UIErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIErrorSpec.swift; sourceTree = "<group>"; };
 		7B43F3B91D563588000B1A30 /* Expectation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expectation.swift; sourceTree = "<group>"; };
 		7B43F3BB1D563650000B1A30 /* ExpectationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpectationResult.swift; sourceTree = "<group>"; };
 		7B43F3BE1D56393B000B1A30 /* ExpectationCreators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpectationCreators.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 				7B43F3C61D563DA0000B1A30 /* ActionResult.swift */,
 				7B43F3A51D562302000B1A30 /* Success.swift */,
 				7B43F3A71D562318000B1A30 /* Failure.swift */,
-				7B43F3A91D56231E000B1A30 /* Error.swift */,
+				7B43F3A91D56231E000B1A30 /* UIError.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 			children = (
 				7B43F3AB1D5623BD000B1A30 /* SuccessSpec.swift */,
 				7B43F3AD1D56240D000B1A30 /* FailureSpec.swift */,
-				7B43F3AF1D56245A000B1A30 /* ErrorSpec.swift */,
+				7B43F3AF1D56245A000B1A30 /* UIErrorSpec.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -436,18 +436,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = jwfriese;
 				TargetAttributes = {
 					7B0D3B441CFB29B40096DBC2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					7BAC78A31D4A432A000F86E4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 7B0D3B441CFB29B40096DBC2;
 					};
 					7BAC78CD1D4B00B6000F86E4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -522,7 +525,7 @@
 			files = (
 				7B43F3AC1D5623BD000B1A30 /* SuccessSpec.swift in Sources */,
 				7BB14A271D634399002ABE82 /* NotSpec.swift in Sources */,
-				7B43F3B01D56245A000B1A30 /* ErrorSpec.swift in Sources */,
+				7B43F3B01D56245A000B1A30 /* UIErrorSpec.swift in Sources */,
 				7BAC78AF1D4A438E000F86E4 /* BoxTurtlePageTests.swift in Sources */,
 				7B43F3AE1D56240D000B1A30 /* FailureSpec.swift in Sources */,
 				7BAC78EC1D4CECAB000F86E4 /* TapButtonActionSpec.swift in Sources */,
@@ -551,7 +554,7 @@
 				7B3AD2051D5A1C8A00CA2897 /* WaitResult.swift in Sources */,
 				7B43F3BF1D56393B000B1A30 /* ExpectationCreators.swift in Sources */,
 				7BAC78F41D4CF097000F86E4 /* Reporter.swift in Sources */,
-				7B43F3AA1D56231E000B1A30 /* Error.swift in Sources */,
+				7B43F3AA1D56231E000B1A30 /* UIError.swift in Sources */,
 				7BAC78D81D4B00FB000F86E4 /* User.swift in Sources */,
 				7BB14A291D63446C002ABE82 /* Not.swift in Sources */,
 				7B43F3C71D563DA0000B1A30 /* ActionResult.swift in Sources */,
@@ -596,6 +599,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITestApp;
 				PRODUCT_NAME = FleetUITestApp;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -611,6 +615,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITestApp;
 				PRODUCT_NAME = FleetUITestApp;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -628,8 +633,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -678,8 +685,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -700,6 +709,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -718,6 +728,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITests;
 				PRODUCT_NAME = FleetUITests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FleetUITestApp;
 			};
 			name = Debug;
@@ -733,6 +744,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITests;
 				PRODUCT_NAME = FleetUITests;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FleetUITestApp;
 			};
 			name = Release;
@@ -740,6 +752,7 @@
 		7BAC78D41D4B00B6000F86E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -762,12 +775,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUI;
 				PRODUCT_NAME = FleetUI;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		7BAC78D51D4B00B6000F86E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -791,6 +806,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUI;
 				PRODUCT_NAME = FleetUI;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

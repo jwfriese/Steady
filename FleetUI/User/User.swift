@@ -1,9 +1,9 @@
 import XCTest
 
-public class User {
-    private var app: XCUIApplication!
-    private var testCase: XCTestCase!
-    private var reporter: Reporter!
+open class User {
+    fileprivate var app: XCUIApplication!
+    fileprivate var testCase: XCTestCase!
+    fileprivate var reporter: Reporter!
 
     init(xcApp: XCUIApplication, testCase xcTestCase: XCTestCase, reporter aReporter: Reporter) {
         app = xcApp
@@ -11,7 +11,7 @@ public class User {
         reporter = aReporter
     }
 
-    public func startTesting() {
+    open func startTesting() {
         app.launch()
 
         // As a workaround to the radar found here: http://openradar.appspot.com/26320475
@@ -20,28 +20,28 @@ public class User {
         wait(0.5)
     }
 
-    public func tapButtonWithText(text: String) {
+    open func tapButtonWithText(_ text: String) {
         doAction(TapButtonAction(text: text))
     }
 
-    public func expectsTo(expectation: Expectation) {
+    open func expectsTo(_ expectation: Expectation) {
         let expectationResult = expectation.validate(app)
         switch expectationResult {
-        case .Satisfied:
+        case .satisfied:
             return
-        case .Rejected:
+        case .rejected:
             let failureMessage = "User expected to \(expectation.description), but \(expectationResult.description)"
             reporter.reportError(failureMessage, testCase: testCase)
         }
     }
 
-    private func doAction(action: Action) {
+    fileprivate func doAction(_ action: Action) {
         var actionResult: ActionResult?
 
         do {
             try actionResult = action.perform(app)
         } catch {
-            actionResult = Error("\(error)")
+            actionResult = UIError("\(error)")
         }
 
         guard let finalResult = actionResult else {

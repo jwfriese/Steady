@@ -1,5 +1,5 @@
-class Error: ActionResult {
-    var errorMessage: String!
+class UIError: ActionResult {
+    var errorMessage: String
 
     init(_ error: String) {
         self.errorMessage = error

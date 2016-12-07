@@ -1,26 +1,26 @@
 class WaitPromise {
-    private(set) var result: WaitResult = .Incomplete
-    private var setSemaphore: dispatch_semaphore_t
+    fileprivate(set) var result: WaitResult = .incomplete
+    fileprivate var setSemaphore: DispatchSemaphore
 
     init() {
-        setSemaphore = dispatch_semaphore_create(1)
+        setSemaphore = DispatchSemaphore(value: 1)
     }
 
-    func set(result: WaitResult) -> Bool {
+    func set(_ result: WaitResult) -> Bool {
         var didSet = false
-        dispatch_semaphore_wait(setSemaphore, 0)
+        let _ = setSemaphore.wait(timeout: DispatchTime(uptimeNanoseconds: 0))
         if isIncomplete() {
             self.result = result
             didSet = true
         }
-        dispatch_semaphore_signal(setSemaphore)
+        setSemaphore.signal()
 
         return didSet
     }
 
     func isIncomplete() -> Bool {
         switch result {
-        case .Incomplete:
+        case .incomplete:
             return true
         default:
             return false

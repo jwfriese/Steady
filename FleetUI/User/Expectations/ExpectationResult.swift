@@ -1,13 +1,13 @@
 public enum ExpectationResult {
-    case Satisfied
-    case Rejected(String)
+    case satisfied
+    case rejected(String)
 
     var description: String {
         get {
             switch self {
-            case .Satisfied:
+            case .satisfied:
                 return "Satisfied"
-            case .Rejected(let rejectionMessage):
+            case .rejected(let rejectionMessage):
                 return rejectionMessage
             }
         }

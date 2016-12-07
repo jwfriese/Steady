@@ -1,7 +1,7 @@
 import XCTest
 
 class Not: Expectation {
-    private var expectation: Expectation!
+    fileprivate var expectation: Expectation
 
     init(_ expectation: Expectation) {
         self.expectation = expectation
@@ -13,13 +13,13 @@ class Not: Expectation {
         }
     }
 
-    func validate(app: XCUIApplication) -> ExpectationResult {
+    func validate(_ app: XCUIApplication) -> ExpectationResult {
         let result = expectation.validate(app)
         switch result {
-        case .Satisfied:
-            return .Rejected("did")
-        case .Rejected:
-            return .Satisfied
+        case .satisfied:
+            return .rejected("did")
+        case .rejected:
+            return .satisfied
         }
     }
 }

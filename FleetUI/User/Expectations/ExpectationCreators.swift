@@ -1,7 +1,7 @@
-public func not(expectation: Expectation) -> Expectation {
+public func not(_ expectation: Expectation) -> Expectation {
     return Not(expectation)
 }
 
-public func seeText(text: String) -> Expectation {
+public func seeText(_ text: String) -> Expectation {
     return CanSeeTextExpectation(text)
 }

@@ -1,8 +1,8 @@
 import Foundation
 
 enum WaitResult {
-    case Incomplete
-    case Fulfilled(Bool)
-    case Timeout
-    case StalledMainRunLoop
+    case incomplete
+    case fulfilled(Bool)
+    case timeout
+    case stalledMainRunLoop
 }
