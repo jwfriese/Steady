@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7B0D3B441CFB29B40096DBC2"
-               BuildableName = "FleetUITestApp.app"
-               BlueprintName = "FleetUITestApp"
-               ReferencedContainer = "container:FleetUI.xcodeproj">
+               BuildableName = "SteadyTestApp.app"
+               BlueprintName = "SteadyTestApp"
+               ReferencedContainer = "container:Steady.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B0D3B441CFB29B40096DBC2"
-            BuildableName = "FleetUITestApp.app"
-            BlueprintName = "FleetUITestApp"
-            ReferencedContainer = "container:FleetUI.xcodeproj">
+            BuildableName = "SteadyTestApp.app"
+            BlueprintName = "SteadyTestApp"
+            ReferencedContainer = "container:Steady.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B0D3B441CFB29B40096DBC2"
-            BuildableName = "FleetUITestApp.app"
-            BlueprintName = "FleetUITestApp"
-            ReferencedContainer = "container:FleetUI.xcodeproj">
+            BuildableName = "SteadyTestApp.app"
+            BlueprintName = "SteadyTestApp"
+            ReferencedContainer = "container:Steady.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B0D3B441CFB29B40096DBC2"
-            BuildableName = "FleetUITestApp.app"
-            BlueprintName = "FleetUITestApp"
-            ReferencedContainer = "container:FleetUI.xcodeproj">
+            BuildableName = "SteadyTestApp.app"
+            BlueprintName = "SteadyTestApp"
+            ReferencedContainer = "container:Steady.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

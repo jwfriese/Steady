@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BAC78CD1D4B00B6000F86E4"
-               BuildableName = "FleetUI.framework"
-               BlueprintName = "FleetUI"
-               ReferencedContainer = "container:FleetUI.xcodeproj">
+               BuildableName = "Steady.framework"
+               BlueprintName = "Steady"
+               ReferencedContainer = "container:Steady.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BAC78A31D4A432A000F86E4"
-               BuildableName = "FleetUITests.xctest"
-               BlueprintName = "FleetUITests"
-               ReferencedContainer = "container:FleetUI.xcodeproj">
+               BuildableName = "SteadyTests.xctest"
+               BlueprintName = "SteadyTests"
+               ReferencedContainer = "container:Steady.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BAC78CD1D4B00B6000F86E4"
-            BuildableName = "FleetUI.framework"
-            BlueprintName = "FleetUI"
-            ReferencedContainer = "container:FleetUI.xcodeproj">
+            BuildableName = "Steady.framework"
+            BlueprintName = "Steady"
+            ReferencedContainer = "container:Steady.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BAC78CD1D4B00B6000F86E4"
-            BuildableName = "FleetUI.framework"
-            BlueprintName = "FleetUI"
-            ReferencedContainer = "container:FleetUI.xcodeproj">
+            BuildableName = "Steady.framework"
+            BlueprintName = "Steady"
+            ReferencedContainer = "container:Steady.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BAC78CD1D4B00B6000F86E4"
-            BuildableName = "FleetUI.framework"
-            BlueprintName = "FleetUI"
-            ReferencedContainer = "container:FleetUI.xcodeproj">
+            BuildableName = "Steady.framework"
+            BlueprintName = "Steady"
+            ReferencedContainer = "container:Steady.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

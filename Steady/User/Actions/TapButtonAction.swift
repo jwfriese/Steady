@@ -2,7 +2,7 @@ import XCTest
 
 class TapButtonAction: Action {
     fileprivate var text: String
-    
+
     init(text: String) {
         self.text = text
     }

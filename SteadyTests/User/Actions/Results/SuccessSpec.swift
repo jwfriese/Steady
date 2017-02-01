@@ -1,6 +1,6 @@
 import XCTest
 import Nimble
-@testable import FleetUI
+@testable import Steady
 
 class SuccessSpec: XCTestCase {
     func test_succeeded_returnsTrue() {

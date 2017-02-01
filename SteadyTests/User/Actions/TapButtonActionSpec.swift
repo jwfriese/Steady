@@ -1,6 +1,6 @@
 import XCTest
 import Nimble
-@testable import FleetUI
+@testable import Steady
 
 class TapButtonActionSpec: XCTestCase {
     var user: User!

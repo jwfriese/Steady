@@ -23,7 +23,7 @@ func main() {
 	iosVersion := args[0]
 	deviceVersion := args[1]
 
-	testInitReport := fmt.Sprintf("Running FleetUI unit tests with iOS version '%s' on  device type '%s'\n", iosVersion, deviceVersion)
+	testInitReport := fmt.Sprintf("Running Steady unit tests with iOS version '%s' on  device type '%s'\n", iosVersion, deviceVersion)
 	_, err := stdOut.Write([]byte(testInitReport))
 	if err != nil {
 		log.Fatal(err)
@@ -36,7 +36,7 @@ func main() {
 
 	iosVersionNumber := strings.Trim(iosVersion, "iOS ")
 	destinationString := fmt.Sprintf("platform=iOS Simulator,OS=%s,name=%s", iosVersionNumber, deviceVersion)
-	unitTestCommand := exec.Command("xcodebuild", "test", "-workspace", "FleetUI.xcworkspace", "-scheme", "FleetUI", "-destination", destinationString)
+	unitTestCommand := exec.Command("xcodebuild", "test", "-workspace", "Steady.xcworkspace", "-scheme", "Steady", "-destination", destinationString)
 	xcprettyCommand := exec.Command("xcpretty")
 	xcprettyCommand.Stdin, err = unitTestCommand.StdoutPipe()
 	if err != nil {
@@ -59,7 +59,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	_, err = stdOut.Write([]byte("FleetUI unit tests passed...\n"))
+	_, err = stdOut.Write([]byte("Steady unit tests passed...\n"))
 	if err != nil {
 		log.Fatal(err)
 	}

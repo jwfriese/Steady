@@ -37,13 +37,13 @@
 		7BA248AA1D5CBEBD00CC750B /* CrabStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD21C1D5CBBA700CA2897 /* CrabStoryboard.storyboard */; };
 		7BA248AB1D5CBEBD00CC750B /* PuppyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD2211D5CBBA700CA2897 /* PuppyStoryboard.storyboard */; };
 		7BA248AC1D5CBECB00CC750B /* TurtlesAndFriendsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD2231D5CBBA700CA2897 /* TurtlesAndFriendsStoryboard.storyboard */; };
-		7BA248AD1D5CC33600CC750B /* FleetUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAC78CE1D4B00B6000F86E4 /* FleetUI.framework */; };
+		7BA248AD1D5CC33600CC750B /* Steady.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAC78CE1D4B00B6000F86E4 /* Steady.framework */; };
 		7BAC78AF1D4A438E000F86E4 /* BoxTurtlePageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78AE1D4A438E000F86E4 /* BoxTurtlePageTests.swift */; };
-		7BAC78D11D4B00B6000F86E4 /* FleetUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BAC78D01D4B00B6000F86E4 /* FleetUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BAC78D11D4B00B6000F86E4 /* Steady.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BAC78D01D4B00B6000F86E4 /* Steady.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BAC78D81D4B00FB000F86E4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78D71D4B00FB000F86E4 /* User.swift */; };
 		7BAC78E31D4CE575000F86E4 /* TapButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78E21D4CE575000F86E4 /* TapButtonAction.swift */; };
 		7BAC78EC1D4CECAB000F86E4 /* TapButtonActionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78EB1D4CECAB000F86E4 /* TapButtonActionSpec.swift */; };
-		7BAC78EE1D4CEE40000F86E4 /* FleetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78ED1D4CEE40000F86E4 /* FleetUI.swift */; };
+		7BAC78EE1D4CEE40000F86E4 /* Steady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78ED1D4CEE40000F86E4 /* Steady.swift */; };
 		7BAC78F41D4CF097000F86E4 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78F31D4CF097000F86E4 /* Reporter.swift */; };
 		7BAC78F71D4CF129000F86E4 /* FakeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC78F61D4CF129000F86E4 /* FakeReporter.swift */; };
 		7BB14A271D634399002ABE82 /* NotSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB14A261D634399002ABE82 /* NotSpec.swift */; };
@@ -72,7 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B0D3B451CFB29B40096DBC2 /* FleetUITestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FleetUITestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0D3B451CFB29B40096DBC2 /* SteadyTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteadyTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD1FA1D5A1AD700CA2897 /* Wait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wait.swift; sourceTree = "<group>"; };
 		7B3AD2041D5A1C8A00CA2897 /* WaitResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitResult.swift; sourceTree = "<group>"; };
 		7B3AD2061D5B61E800CA2897 /* WaitPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitPromise.swift; sourceTree = "<group>"; };
@@ -105,16 +105,16 @@
 		7B43F3C41D563D59000B1A30 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		7B43F3C61D563DA0000B1A30 /* ActionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionResult.swift; sourceTree = "<group>"; };
 		7BA90AD11CC3EF420040B031 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		7BAC78A41D4A432A000F86E4 /* FleetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FleetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAC78A41D4A432A000F86E4 /* SteadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAC78A81D4A432A000F86E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BAC78AE1D4A438E000F86E4 /* BoxTurtlePageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxTurtlePageTests.swift; sourceTree = "<group>"; };
-		7BAC78CE1D4B00B6000F86E4 /* FleetUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FleetUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BAC78D01D4B00B6000F86E4 /* FleetUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FleetUI.h; sourceTree = "<group>"; };
+		7BAC78CE1D4B00B6000F86E4 /* Steady.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Steady.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAC78D01D4B00B6000F86E4 /* Steady.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Steady.h; sourceTree = "<group>"; };
 		7BAC78D21D4B00B6000F86E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BAC78D71D4B00FB000F86E4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7BAC78E21D4CE575000F86E4 /* TapButtonAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapButtonAction.swift; sourceTree = "<group>"; };
 		7BAC78EB1D4CECAB000F86E4 /* TapButtonActionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapButtonActionSpec.swift; sourceTree = "<group>"; };
-		7BAC78ED1D4CEE40000F86E4 /* FleetUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleetUI.swift; sourceTree = "<group>"; };
+		7BAC78ED1D4CEE40000F86E4 /* Steady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Steady.swift; sourceTree = "<group>"; };
 		7BAC78F31D4CF097000F86E4 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 		7BAC78F61D4CF129000F86E4 /* FakeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeReporter.swift; sourceTree = "<group>"; };
 		7BB14A261D634399002ABE82 /* NotSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotSpec.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA248AD1D5CC33600CC750B /* FleetUI.framework in Frameworks */,
+				7BA248AD1D5CC33600CC750B /* Steady.framework in Frameworks */,
 				7B43F3A01D50CDCE000B1A30 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,7 +162,7 @@
 			path = Wait;
 			sourceTree = "<group>";
 		};
-		7B3AD2111D5CBBA700CA2897 /* FleetUITestApp */ = {
+		7B3AD2111D5CBBA700CA2897 /* SteadyTestApp */ = {
 			isa = PBXGroup;
 			children = (
 				7B3AD2121D5CBBA700CA2897 /* AppDelegate.swift */,
@@ -171,7 +171,7 @@
 				7B3AD2181D5CBBA700CA2897 /* Info.plist */,
 				7B3AD2191D5CBBA700CA2897 /* Storyboards */,
 			);
-			path = FleetUITestApp;
+			path = SteadyTestApp;
 			sourceTree = "<group>";
 		};
 		7B3AD2191D5CBBA700CA2897 /* Storyboards */ = {
@@ -244,9 +244,9 @@
 		7BA90AA91CC130980040B031 = {
 			isa = PBXGroup;
 			children = (
-				7B3AD2111D5CBBA700CA2897 /* FleetUITestApp */,
-				7BAC78A51D4A432A000F86E4 /* FleetUITests */,
-				7BAC78CF1D4B00B6000F86E4 /* FleetUI */,
+				7B3AD2111D5CBBA700CA2897 /* SteadyTestApp */,
+				7BAC78A51D4A432A000F86E4 /* SteadyTests */,
+				7BAC78CF1D4B00B6000F86E4 /* Steady */,
 				7BA90AD51CC3F0320040B031 /* Frameworks */,
 				7BA90AB41CC130980040B031 /* Products */,
 			);
@@ -255,9 +255,9 @@
 		7BA90AB41CC130980040B031 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B0D3B451CFB29B40096DBC2 /* FleetUITestApp.app */,
-				7BAC78A41D4A432A000F86E4 /* FleetUITests.xctest */,
-				7BAC78CE1D4B00B6000F86E4 /* FleetUI.framework */,
+				7B0D3B451CFB29B40096DBC2 /* SteadyTestApp.app */,
+				7BAC78A41D4A432A000F86E4 /* SteadyTests.xctest */,
+				7BAC78CE1D4B00B6000F86E4 /* Steady.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7BAC78A51D4A432A000F86E4 /* FleetUITests */ = {
+		7BAC78A51D4A432A000F86E4 /* SteadyTests */ = {
 			isa = PBXGroup;
 			children = (
 				7BAC78F51D4CF117000F86E4 /* Fakes */,
@@ -281,20 +281,20 @@
 				7B3AD2081D5BC12B00CA2897 /* UserWaitTests.swift */,
 				7BB14A2F1D6354F4002ABE82 /* ElementVisibilityTests.swift */,
 			);
-			path = FleetUITests;
+			path = SteadyTests;
 			sourceTree = "<group>";
 		};
-		7BAC78CF1D4B00B6000F86E4 /* FleetUI */ = {
+		7BAC78CF1D4B00B6000F86E4 /* Steady */ = {
 			isa = PBXGroup;
 			children = (
-				7BAC78ED1D4CEE40000F86E4 /* FleetUI.swift */,
-				7BAC78D01D4B00B6000F86E4 /* FleetUI.h */,
+				7BAC78ED1D4CEE40000F86E4 /* Steady.swift */,
+				7BAC78D01D4B00B6000F86E4 /* Steady.h */,
+				7BAC78D21D4B00B6000F86E4 /* Info.plist */,
 				7BB14A2C1D63546A002ABE82 /* CoreExtension */,
 				7BAC78F21D4CF097000F86E4 /* Reporting */,
 				7BAC78D61D4B00FB000F86E4 /* User */,
-				7BAC78D21D4B00B6000F86E4 /* Info.plist */,
 			);
-			path = FleetUI;
+			path = Steady;
 			sourceTree = "<group>";
 		};
 		7BAC78D61D4B00FB000F86E4 /* User */ = {
@@ -312,8 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				7B43F3C41D563D59000B1A30 /* Action.swift */,
-				7B43F3A11D562295000B1A30 /* Results */,
 				7BAC78E21D4CE575000F86E4 /* TapButtonAction.swift */,
+				7B43F3A11D562295000B1A30 /* Results */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -330,8 +330,8 @@
 		7BAC78E91D4CEC20000F86E4 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				7B43F3A21D5622AE000B1A30 /* Results */,
 				7BAC78EB1D4CECAB000F86E4 /* TapButtonActionSpec.swift */,
+				7B43F3A21D5622AE000B1A30 /* Results */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -368,16 +368,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BAC78D11D4B00B6000F86E4 /* FleetUI.h in Headers */,
+				7BAC78D11D4B00B6000F86E4 /* Steady.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7B0D3B441CFB29B40096DBC2 /* FleetUITestApp */ = {
+		7B0D3B441CFB29B40096DBC2 /* SteadyTestApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B0D3B541CFB29B40096DBC2 /* Build configuration list for PBXNativeTarget "FleetUITestApp" */;
+			buildConfigurationList = 7B0D3B541CFB29B40096DBC2 /* Build configuration list for PBXNativeTarget "SteadyTestApp" */;
 			buildPhases = (
 				7B0D3B411CFB29B40096DBC2 /* Sources */,
 				7B0D3B421CFB29B40096DBC2 /* Frameworks */,
@@ -387,14 +387,14 @@
 			);
 			dependencies = (
 			);
-			name = FleetUITestApp;
+			name = SteadyTestApp;
 			productName = FleetUITestApp;
-			productReference = 7B0D3B451CFB29B40096DBC2 /* FleetUITestApp.app */;
+			productReference = 7B0D3B451CFB29B40096DBC2 /* SteadyTestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7BAC78A31D4A432A000F86E4 /* FleetUITests */ = {
+		7BAC78A31D4A432A000F86E4 /* SteadyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BAC78AB1D4A432A000F86E4 /* Build configuration list for PBXNativeTarget "FleetUITests" */;
+			buildConfigurationList = 7BAC78AB1D4A432A000F86E4 /* Build configuration list for PBXNativeTarget "SteadyTests" */;
 			buildPhases = (
 				7BAC78A01D4A432A000F86E4 /* Sources */,
 				7BAC78A11D4A432A000F86E4 /* Frameworks */,
@@ -406,14 +406,14 @@
 				7BAC78DA1D4B01D6000F86E4 /* PBXTargetDependency */,
 				7BAC78AA1D4A432A000F86E4 /* PBXTargetDependency */,
 			);
-			name = FleetUITests;
+			name = SteadyTests;
 			productName = FleetUITests;
-			productReference = 7BAC78A41D4A432A000F86E4 /* FleetUITests.xctest */;
+			productReference = 7BAC78A41D4A432A000F86E4 /* SteadyTests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		7BAC78CD1D4B00B6000F86E4 /* FleetUI */ = {
+		7BAC78CD1D4B00B6000F86E4 /* Steady */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BAC78D31D4B00B6000F86E4 /* Build configuration list for PBXNativeTarget "FleetUI" */;
+			buildConfigurationList = 7BAC78D31D4B00B6000F86E4 /* Build configuration list for PBXNativeTarget "Steady" */;
 			buildPhases = (
 				7BAC78C91D4B00B6000F86E4 /* Sources */,
 				7BAC78CA1D4B00B6000F86E4 /* Frameworks */,
@@ -424,9 +424,9 @@
 			);
 			dependencies = (
 			);
-			name = FleetUI;
+			name = Steady;
 			productName = FleetUI;
-			productReference = 7BAC78CE1D4B00B6000F86E4 /* FleetUI.framework */;
+			productReference = 7BAC78CE1D4B00B6000F86E4 /* Steady.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -454,7 +454,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7BA90AAD1CC130980040B031 /* Build configuration list for PBXProject "FleetUI" */;
+			buildConfigurationList = 7BA90AAD1CC130980040B031 /* Build configuration list for PBXProject "Steady" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -467,9 +467,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7BAC78CD1D4B00B6000F86E4 /* FleetUI */,
-				7B0D3B441CFB29B40096DBC2 /* FleetUITestApp */,
-				7BAC78A31D4A432A000F86E4 /* FleetUITests */,
+				7BAC78CD1D4B00B6000F86E4 /* Steady */,
+				7B0D3B441CFB29B40096DBC2 /* SteadyTestApp */,
+				7BAC78A31D4A432A000F86E4 /* SteadyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -546,7 +546,7 @@
 				7B3AD1FB1D5A1AD700CA2897 /* Wait.swift in Sources */,
 				7BAC78E31D4CE575000F86E4 /* TapButtonAction.swift in Sources */,
 				7B43F3BA1D563588000B1A30 /* Expectation.swift in Sources */,
-				7BAC78EE1D4CEE40000F86E4 /* FleetUI.swift in Sources */,
+				7BAC78EE1D4CEE40000F86E4 /* Steady.swift in Sources */,
 				7B43F3BC1D563650000B1A30 /* ExpectationResult.swift in Sources */,
 				7B43F3A61D562302000B1A30 /* Success.swift in Sources */,
 				7B43F3C11D563A02000B1A30 /* CanSeeTextExpectation.swift in Sources */,
@@ -567,12 +567,12 @@
 /* Begin PBXTargetDependency section */
 		7BAC78AA1D4A432A000F86E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B0D3B441CFB29B40096DBC2 /* FleetUITestApp */;
+			target = 7B0D3B441CFB29B40096DBC2 /* SteadyTestApp */;
 			targetProxy = 7BAC78A91D4A432A000F86E4 /* PBXContainerItemProxy */;
 		};
 		7BAC78DA1D4B01D6000F86E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BAC78CD1D4B00B6000F86E4 /* FleetUI */;
+			target = 7BAC78CD1D4B00B6000F86E4 /* Steady */;
 			targetProxy = 7BAC78D91D4B01D6000F86E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -594,11 +594,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/FleetUITestApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SteadyTestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITestApp;
-				PRODUCT_NAME = FleetUITestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.SteadyApp;
+				PRODUCT_NAME = SteadyTestApp;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -610,11 +610,11 @@
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = "$(SRCROOT)/FleetUITestApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SteadyTestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITestApp;
-				PRODUCT_NAME = FleetUITestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.SteadyApp;
+				PRODUCT_NAME = SteadyTestApp;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -722,14 +722,14 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = FleetUITests/Info.plist;
+				INFOPLIST_FILE = SteadyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITests;
-				PRODUCT_NAME = FleetUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.SteadyTests;
+				PRODUCT_NAME = SteadyTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = FleetUITestApp;
+				TEST_TARGET_NAME = SteadyTestApp;
 			};
 			name = Debug;
 		};
@@ -739,13 +739,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = FleetUITests/Info.plist;
+				INFOPLIST_FILE = SteadyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUITests;
-				PRODUCT_NAME = FleetUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.SteadyTests;
+				PRODUCT_NAME = SteadyTests;
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = FleetUITestApp;
+				TEST_TARGET_NAME = SteadyTestApp;
 			};
 			name = Release;
 		};
@@ -763,7 +763,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = FleetUI/Info.plist;
+				INFOPLIST_FILE = Steady/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -772,8 +772,8 @@
 					XCTest,
 					"-weak-lswiftXCTest",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUI;
-				PRODUCT_NAME = FleetUI;
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.Steady;
+				PRODUCT_NAME = Steady;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -794,7 +794,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = FleetUI/Info.plist;
+				INFOPLIST_FILE = Steady/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -803,8 +803,8 @@
 					XCTest,
 					"-weak-lswiftXCTest",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetUI;
-				PRODUCT_NAME = FleetUI;
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.Steady;
+				PRODUCT_NAME = Steady;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -813,7 +813,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B0D3B541CFB29B40096DBC2 /* Build configuration list for PBXNativeTarget "FleetUITestApp" */ = {
+		7B0D3B541CFB29B40096DBC2 /* Build configuration list for PBXNativeTarget "SteadyTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B0D3B551CFB29B40096DBC2 /* Debug */,
@@ -822,7 +822,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BA90AAD1CC130980040B031 /* Build configuration list for PBXProject "FleetUI" */ = {
+		7BA90AAD1CC130980040B031 /* Build configuration list for PBXProject "Steady" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BA90AB91CC130990040B031 /* Debug */,
@@ -831,7 +831,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BAC78AB1D4A432A000F86E4 /* Build configuration list for PBXNativeTarget "FleetUITests" */ = {
+		7BAC78AB1D4A432A000F86E4 /* Build configuration list for PBXNativeTarget "SteadyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BAC78AC1D4A432A000F86E4 /* Debug */,
@@ -840,7 +840,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BAC78D31D4B00B6000F86E4 /* Build configuration list for PBXNativeTarget "FleetUI" */ = {
+		7BAC78D31D4B00B6000F86E4 /* Build configuration list for PBXNativeTarget "Steady" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BAC78D41D4B00B6000F86E4 /* Debug */,

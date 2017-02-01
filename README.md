@@ -1,2 +1,2 @@
-# FleetUI
-Framework intended to make UI testing in Xcode a more pleasurable experience
+# Steady
+Framework intended to make UI testing in Xcode a steadier, more pleasurable experience

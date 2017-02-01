@@ -1,6 +1,6 @@
 import XCTest
 import Nimble
-@testable import FleetUI
+@testable import Steady
 
 class NotSpec: XCTestCase {
     var user: User!

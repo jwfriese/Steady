@@ -1,5 +1,5 @@
 import XCTest
-@testable import FleetUI
+@testable import Steady
 
 class FakeReporter: Reporter {
     var lastReportedMessage: String?

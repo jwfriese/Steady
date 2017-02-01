@@ -1,6 +1,6 @@
 import XCTest
 import Nimble
-@testable import FleetUI
+@testable import Steady
 
 class CanSeeTextExpectationSpec: XCTestCase {
     var user: User!

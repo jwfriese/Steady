@@ -1,5 +1,5 @@
 import XCTest
-import FleetUI
+import Steady
 import Nimble
 
 class UserWaitTests: XCTestCase {
@@ -9,7 +9,7 @@ class UserWaitTests: XCTestCase {
         super.setUp()
 
         continueAfterFailure = false
-        user = FleetUI.createUser(testCase: self)
+        user = Steady.createUser(testCase: self)
         user.startTesting()
     }
 
