@@ -67,7 +67,7 @@ private class Wait {
         case .fulfilled(let value):
             return value
         case .stalledMainRunLoop:
-            print("Fleet: Timeout occurred on user action and run loop stalled")
+            print("Steady: Timeout occurred on user action and run loop stalled")
             return false
         default:
             return false
@@ -78,7 +78,7 @@ private class Wait {
         let timeoutSource = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags.strict, queue: DispatchQueue.global(qos: .userInitiated))
 
         let timeoutValue = Double(Int64(timeout * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        timeoutSource.scheduleOneshot(deadline: DispatchTime.now() + timeoutValue, leeway: DispatchTimeInterval.milliseconds(2))
+        timeoutSource.schedule(deadline: DispatchTime.now() + timeoutValue, leeway: DispatchTimeInterval.milliseconds(2))
 
         timeoutSource.setEventHandler {
             guard self.promise.isIncomplete() else { return }
@@ -120,9 +120,9 @@ private class Wait {
             queue: DispatchQueue.global(qos: .userInitiated)
         )
 
-        predicateSource.scheduleRepeating(
+        predicateSource.schedule(
             deadline: DispatchTime.now(),
-            interval: DispatchTimeInterval.nanoseconds(Int(TimeInterval(NSEC_PER_SEC))),
+            repeating: DispatchTimeInterval.nanoseconds(Int(TimeInterval(NSEC_PER_SEC))),
             leeway: DispatchTimeInterval.milliseconds(1)
         )
 
