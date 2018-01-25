@@ -11,7 +11,7 @@ open class User {
         reporter = aReporter
     }
 
-    open func startTesting() {
+    public func startTesting() {
         app.launch()
 
         // As a workaround to the radar found here: http://openradar.appspot.com/26320475
@@ -20,11 +20,11 @@ open class User {
         wait(0.5)
     }
 
-    open func tapButtonWithText(_ text: String) {
+    public func tapButtonWithText(_ text: String) {
         doAction(TapButtonAction(text: text))
     }
 
-    open func expectsTo(_ expectation: Expectation) {
+    public func expectsTo(_ expectation: Expectation) {
         let expectationResult = expectation.validate(app)
         switch expectationResult {
         case .satisfied:
