@@ -15,7 +15,7 @@ open class User {
         app.launch()
 
         // As a workaround to the radar found here: http://openradar.appspot.com/26320475
-        // Hopefully, this can go away one day. Once it does, Fleet users won't have to do anything
+        // Hopefully, this can go away one day. Once it does, Steady users won't have to do anything
         // in their tests. We'll just take this out.
         wait(0.5)
     }
@@ -45,7 +45,7 @@ open class User {
         }
 
         guard let finalResult = actionResult else {
-            reporter.reportError("Fleet fatal error: No user action result", testCase: testCase)
+            reporter.reportError("Steady fatal error: No user action result", testCase: testCase)
             return
         }
 
