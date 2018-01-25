@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Externals/Nimble/Nimble.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/jwfriese/workspace/FleetUI/Steady.xcodeproj">
+      location = "group:Steady.xcodeproj">
    </FileRef>
 </Workspace>
