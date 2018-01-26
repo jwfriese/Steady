@@ -1,6 +1,5 @@
 import XCTest
 import Steady
-import Nimble
 
 class ElementVisibilityTests: XCTestCase {
     var user: User!

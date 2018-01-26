@@ -1,6 +1,5 @@
 import XCTest
 import Steady
-import Nimble
 
 class BoxTurtlePageTests: XCTestCase {
     var user: User!

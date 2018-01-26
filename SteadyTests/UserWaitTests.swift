@@ -1,6 +1,5 @@
 import XCTest
 import Steady
-import Nimble
 
 class UserWaitTests: XCTestCase {
     var user: User!
