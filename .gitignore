@@ -54,6 +54,7 @@ Carthage/Checkouts
 Carthage/Build
 
 # fastlane
+test_output
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
 # screenshots whenever they are needed.
@@ -62,9 +63,6 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
-
-# The binary produced for running tests
-test
 
 # The binary produced for trimming
 trim
